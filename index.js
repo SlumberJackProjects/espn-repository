@@ -8,7 +8,7 @@ app.use(express.json());
 
 const LEAGUE_ID = '83176';
 const SEASON = '2026';
-const ESPN_S2 = process.env.ESPN_S2;
+const ESPN_S2 = decodeURIComponent(process.env.ESPN_S2);
 const SWID = process.env.SWID;
 
 const ESPN_BASE = `https://fantasy.espn.com/apis/v3/games/flb/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}`;
